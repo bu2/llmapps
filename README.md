@@ -12,3 +12,9 @@ Use your favourite local LLM as code assistant to generate code and iterate on i
 ```bash
 $ streamlit run code_assistant.py
 ```
+
+### LLM Arena
+Evaluate your prompt against all your local LLMs.
+```bash
+$ streamlit run llm_arena.py
+```
