@@ -2,6 +2,7 @@ import ollama
 import streamlit as st
 
 LLMs = [
+    'gemma2:2b',
     # 'phi:latest',
     'phi3:latest',
     # 'llama2:latest',

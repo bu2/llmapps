@@ -1,8 +1,9 @@
-import streamlit as st
 import ollama
+import streamlit as st
 
 
 LLMs = [
+    'gemma2:2b',
     'phi3',
     'mistral',
     'qwen2',
@@ -20,7 +21,7 @@ LLMs = [
     'mixtral:8x22b',
 ]
 
-LLM = 'llama3.1'
+LLM = 'codestral'
 
 SYSTEM = 'Output only code with comments.'
 
