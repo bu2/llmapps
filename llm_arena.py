@@ -2,42 +2,66 @@ import ollama
 import streamlit as st
 
 LLMs = [
+    'qwen2-math:1.5b',
+    'yi-coder:1.5b',
     'gemma2:2b',
+    
     # 'phi:latest',
-    'phi3:latest',
+    
+    # 'phi3:latest',
+    'phi3.5:latest',
+    
     # 'llama2:latest',
+    
     'mathstral:latest',
     'mistral:latest',
     'qwen2:latest',
+    'qwen2-math:latest',
+    
     # 'internlm2:latest',
-    'llama3:latest',
+    
+    # 'llama3:latest',
     'llama3.1:latest',
-    # 'aya:latest',
-    'gemma:latest',
+    'hermes3:latest',
+    'aya:latest',
+    'yi-coder:latest',
+
+    # 'gemma:latest',
     'gemma2:latest',
-    'codegeex4:latest',
-    'glm4:latest',
+
+    # 'glm4:latest',
+    # 'codegeex4:latest',
+    
     'mistral-nemo:latest',
     'phi3:14b',
-    'phi3:medium-128k',
-    'deepseek-coder-v2:latest',
     'deepseek-v2:latest',
+    'deepseek-coder-v2:latest',
+    
     # 'starcoder2:15b',
+
     'codestral:latest',
     'gemma2:27b',
+    
     'deepseek-coder:33b',
-    'granite-code:34b',
+
+    # 'granite-code:34b',
+    
     'yi:34b',
     'aya:35b',
     'command-r:latest',
     'mixtral:latest',
     'llama3:70b',
     'llama3.1:70b',
+    'hermes3:70b',
+    'reflection:latest',
     'qwen2:72b',
+    'qwen2-math:72b',
     'command-r-plus:latest',
     'qwen:110b',
     'mistral-large:latest',
+    
     # 'dbrx:latest',
+    
     'mixtral:8x22b',
     'wizardlm2:8x22b',
 ]
