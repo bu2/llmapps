@@ -30,7 +30,7 @@ SYSTEM = 'Output only code with comments.'
 
     
 def llm(prompt):
-    return ollama.generate(prompt=prompt, model=LLM, stream=True)
+    return ollama.generate(prompt=prompt, model=LLM, options=dict(temperature=0), stream=True)
 
 
 def streaming_callback(x):
