@@ -34,9 +34,9 @@ LLMs = [
 DEFAULT_INSTRUCTOR = 'mistral-large'
 DEFAULT_EXECUTOR = 'codestral'
 
-SYSTEM_COT = 'Break down the complex problem from the prompt and derive a plan to solve the problem. Write only the plan at this stage.\n'
+SYSTEM_COT = 'Break down the complex problem from the prompt and derive a plan to solve the problem. Write the plan as a list of specific requirements but avoid implementation details.\n'
 
-SYSTEM_PLAN = 'Extract the plan, improve it and sort the tasks in the best order to avoid duplicate work. **Output only the optimized plan as a JSON list of strings!**\n'
+SYSTEM_PLAN = 'Extract the plan and **output only the plan as a JSON list of strings!**\n'
 
 SYSTEM_TASK = 'Process the task based on the context without repeating what is already in the context.\n'
 
