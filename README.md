@@ -5,7 +5,7 @@ LLM experiments based on Ollama and Streamlit.
 ### Prerequisites
 You need a local install of Ollama (https://ollama.com) and the following Python packages:
 ```bash
-$ pip install ollama streamlit
+$ pip install ollama streamlit tiktoken
 ```
 
 ### Code Assistant
