@@ -60,8 +60,8 @@ def streaming_callback(x):
 
 
 st.set_page_config(layout="wide")    
-st.title('Chain of Thoughts')
-st.markdown('##### Ask a complex problem and follow the chain of thoughts...')
+st.title('Chain of Thought')
+st.markdown('##### Ask a complex problem and follow the chain of thought...')
 
 
 if os.path.exists(STATE_FILE):
