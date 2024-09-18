@@ -19,3 +19,9 @@ Evaluate your prompt against all your local LLMs.
 ```bash
 $ streamlit run llm_arena.py
 ```
+
+### Chain of Thought
+Leverage the Chain-of-Thought principle to crack complex problems.
+```bash
+$ streamlit run chain_of_thought.py
+```
