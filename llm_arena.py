@@ -2,7 +2,9 @@ import ollama
 import streamlit as st
 
 LLMs = [
+    'qwen2.5:0.5b',
     'qwen2-math:1.5b',
+    'qwen2.5:1.5b',
     'yi-coder:1.5b',
     'gemma2:2b',
     
@@ -15,8 +17,10 @@ LLMs = [
     
     'mathstral:latest',
     'mistral:latest',
-    'qwen2:latest',
+
+    # 'qwen2:latest',
     'qwen2-math:latest',
+    'qwen2.5:latest',
     
     # 'internlm2:latest',
     
@@ -34,6 +38,7 @@ LLMs = [
     
     'mistral-nemo:latest',
     'phi3:14b',
+    'qwen2.5:14b',
     'deepseek-v2:latest',
     'deepseek-coder-v2:latest',
     
@@ -41,6 +46,8 @@ LLMs = [
 
     'codestral:latest',
     'gemma2:27b',
+
+    'qwen2.5:32b',
     
     'deepseek-coder:33b',
 
