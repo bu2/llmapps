@@ -33,11 +33,11 @@ LLMs = [
 DEFAULT_INSTRUCTOR = 'mistral-large'
 DEFAULT_EXECUTOR = DEFAULT_INSTRUCTOR
 
-SYSTEM_COT = 'Break down the complex problem into smaller pieces and create a very detailed plan to solve each piece separately. Be careful to include everything required to solve the problem and to avoid unecessary work. Specify each task in natural language with as many details as possible. Write the plan as a long and flat list of tasks without any hierarchy.\n'
+SYSTEM_COT = 'Break down the complex problem into smaller pieces and define a plan in your mind to solve each piece separately. Include everything required to solve the problem and avoid unecessary work. Specify each task in natural language with as many details as possible. Write the plan as a long and flat list of tasks without any hierarchy.\n'
 
 SYSTEM_PLAN = 'Extract all tasks with their full description and output them as a JSON list of strings.\n'
 
-SYSTEM_TASK = 'Leverage the whole context to process the task without repeating what is already in the context.\n'
+SYSTEM_TASK = 'Leverage the whole context to process the task.\n'
 
 SYSTEM_PROMPT = 'Leverage the whole context to answer the prompt.'
 
