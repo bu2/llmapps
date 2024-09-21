@@ -5,46 +5,49 @@ LLMs = [
     'qwen2.5:0.5b',
     'qwen2-math:1.5b',
     'qwen2.5:1.5b',
+    'qwen2.5-coder:1.5b',
     'yi-coder:1.5b',
     'gemma2:2b',
     
-    # 'phi:latest',
+    # 'phi',
+    # 'phi3',
+    'phi3.5',
     
-    # 'phi3:latest',
-    'phi3.5:latest',
+    # 'llama2',
     
-    # 'llama2:latest',
-    
-    'mathstral:latest',
-    'mistral:latest',
+    'mathstral',
+    'mistral',
 
-    # 'qwen2:latest',
-    'qwen2-math:latest',
-    'qwen2.5:latest',
+    # 'qwen2',
+    'qwen2-math',
+    'qwen2.5',
+    'qwen2.5-coder',
     
-    # 'internlm2:latest',
+    # 'internlm2',
     
-    # 'llama3:latest',
-    'llama3.1:latest',
-    'hermes3:latest',
-    'aya:latest',
-    'yi-coder:latest',
+    # 'llama3',
+    'llama3.1',
+    'hermes3',
+    'aya',
+    'yi-coder',
 
-    # 'gemma:latest',
-    'gemma2:latest',
+    # 'gemma',
+    'gemma2',
 
-    # 'glm4:latest',
-    # 'codegeex4:latest',
+    # 'glm4',
+    # 'codegeex4',
     
-    'mistral-nemo:latest',
+    'mistral-nemo',
+
     'phi3:14b',
     'qwen2.5:14b',
-    'deepseek-v2:latest',
-    'deepseek-coder-v2:latest',
+
+    'deepseek-v2',
+    'deepseek-coder-v2',
     
     # 'starcoder2:15b',
 
-    'codestral:latest',
+    'codestral',
     'gemma2:27b',
 
     'qwen2.5:32b',
@@ -55,19 +58,23 @@ LLMs = [
     
     'yi:34b',
     'aya:35b',
-    'command-r:latest',
-    'mixtral:latest',
+    'command-r',
+
+    'mixtral',
+    
     'llama3:70b',
     'llama3.1:70b',
     'hermes3:70b',
-    'reflection:latest',
     'qwen2:72b',
     'qwen2-math:72b',
-    'command-r-plus:latest',
+
+    'command-r-plus',
+
     'qwen:110b',
-    'mistral-large:latest',
+
+    'mistral-large',
     
-    # 'dbrx:latest',
+    # 'dbrx',
     
     'mixtral:8x22b',
     'wizardlm2:8x22b',
