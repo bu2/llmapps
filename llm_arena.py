@@ -3,11 +3,17 @@ import streamlit as st
 
 LLMs = [
     'qwen2.5:0.5b',
+
+    'llama3.2:1b',
+
     'qwen2-math:1.5b',
     'qwen2.5:1.5b',
     'qwen2.5-coder:1.5b',
     'yi-coder:1.5b',
+
     'gemma2:2b',
+
+    'llama3.2:3b',
     
     # 'phi',
     # 'phi3',
@@ -48,6 +54,9 @@ LLMs = [
     # 'starcoder2:15b',
 
     'codestral',
+
+    'mistral-small',
+
     'gemma2:27b',
 
     'qwen2.5:32b',
@@ -67,6 +76,7 @@ LLMs = [
     'hermes3:70b',
     'qwen2:72b',
     'qwen2-math:72b',
+    'qwen2.5:72b',
 
     'command-r-plus',
 

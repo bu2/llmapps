@@ -10,22 +10,24 @@ import tiktoken
 
 
 LLMs = [
+    'llama3.2:1b',
     'qwen2.5:1.5b',
     'qwen2.5-coder:1.5b',
     'gemma2:2b',
+    'llama3.2:3b',
     'phi3.5',
     'mistral',
     'qwen2.5',
     'qwen2.5-coder',
     'llama3.1',
-    'gemma2',
-    'command-r',
+    'gemma2'
     'mistral-nemo',
     'phi3:14b',
     'qwen2.5:14b',
     'codestral',
     'gemma2:27b',
     'qwen2.5:32b',
+    'command-r',
     'mixtral',
     'llama3.1:70b',
     'qwen2.5:72b',
