@@ -38,13 +38,15 @@ LLMs = [
 DEFAULT_INSTRUCTOR = 'mistral-large'
 DEFAULT_EXECUTOR = DEFAULT_INSTRUCTOR
 
-SYSTEM_COT = 'Break down the complex problem into smaller pieces and define a plan in your mind to solve each piece separately. Include everything required to solve the problem and avoid unecessary work. Specify each task in natural language with as many details as possible. Write the plan as a long and flat list of tasks without any hierarchy.\n'
+SYSTEM_COT = 'Break down the complex problem into smaller pieces and follow a top-down approach to construct the solution step by step. ' \
+             'Specify each step in natural language and recall all necessary requirements at each step. '                                 \
+             'Write the plan as a long and flat list of tasks without any hierarchy. Stop right after the plan.\n'
 
 SYSTEM_PLAN = 'Extract all tasks with their full description and output them as a JSON list of strings.\n'
 
-SYSTEM_TASK = 'Leverage the whole context to process the task.\n'
+SYSTEM_TASK = 'Reuse the context and process the current task only to refine the solution to the user problem.\n'
 
-SYSTEM_PROMPT = 'Leverage the whole context to answer the prompt.'
+SYSTEM_PROMPT = 'Reuse the context to answer the prompt.\n'
 
 STATE_FILE = 'cot_session_state.json'
 
@@ -122,12 +124,13 @@ if len(st.session_state.history) > 0:
 
 def build_prompt(problem=None):
     if problem:
-        prompt = f"User problem:\n{problem}\n\n\n"
+        prompt = f"## User problem:\n{problem}\n\n\n"
     else:
         prompt = ''
-    prompt += 'Context:\n\n'
+    prompt += '## Context:\n\n'
     for item in st.session_state.history:
         prompt += f"\t{item['role']}: {item['message']}\n\n"
+    prompt += '\n'
     return prompt
 
 
@@ -149,11 +152,10 @@ elif st.session_state.do_planning and st.session_state.plan is None:
     with st.chat_message('ai'):
         answer = st.write_stream(streaming_callback(response))
     st.session_state.history.append({'role': 'user', 'message': prompt})
-
     st.session_state.plan = answer
     st.session_state.go = True
 
-    st.text_area('Plan', key='plan')    
+    st.text_area('Plan', key='plan')
     st.button('Go', type='primary')
 
 elif st.session_state.do_planning and st.session_state.go:
@@ -184,7 +186,7 @@ elif st.session_state.do_planning and st.session_state.go:
             st.markdown('### ' + step)
         
         prompt2 = build_prompt(st.session_state.prompt)
-        prompt2 += f"\n\n\n## Task\n{step}"
+        prompt2 += f"\n\n\n## Current task:\n{step}"
         prompt2 += '\n\n\n' + SYSTEM_TASK 
         response = llm(prompt2, EXECUTOR)
         with st.chat_message('ai'):
