@@ -3,10 +3,11 @@ import streamlit as st
 
 
 LLMs = [
+    'llama3.2:1b',
     'qwen2.5:1.5b',
     'qwen2.5-coder:1.5b',
-    'llama3.2:1b',
     'gemma2:2b',
+    'qwen2.5:3b',
     'llama3.2:3b',
     'phi3.5',
     'mistral',
@@ -25,6 +26,7 @@ LLMs = [
     'mixtral',
     'llama3.1:70b',
     'qwen2.5:72b',
+    'nemotron',
     'command-r-plus',
     'qwen:110b',
     'mistral-large',

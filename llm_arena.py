@@ -2,18 +2,21 @@ import ollama
 import streamlit as st
 
 LLMs = [
-    'qwen2.5:0.5b',
+    # 'qwen2.5:0.5b',
 
     'llama3.2:1b',
 
-    'qwen2-math:1.5b',
     'qwen2.5:1.5b',
     'qwen2.5-coder:1.5b',
+    'qwen2-math:1.5b',
     'yi-coder:1.5b',
 
     'gemma2:2b',
 
+    'granite3-dense:2b',
+
     'llama3.2:3b',
+    'qwen2.5:3b',
     
     # 'phi',
     # 'phi3',
@@ -21,11 +24,11 @@ LLMs = [
     
     # 'llama2',
     
-    'mathstral',
     'mistral',
+    'mathstral',
 
     # 'qwen2',
-    'qwen2-math',
+    # 'qwen2-math',
     'qwen2.5',
     'qwen2.5-coder',
     
@@ -36,6 +39,8 @@ LLMs = [
     'hermes3',
     'aya',
     'yi-coder',
+
+    'granite3-dense:8b',
 
     # 'gemma',
     'gemma2',
@@ -53,11 +58,13 @@ LLMs = [
     
     # 'starcoder2:15b',
 
-    'codestral',
-
     'mistral-small',
 
+    'codestral',
+
     'gemma2:27b',
+
+    'command-r',
 
     'qwen2.5:32b',
     
@@ -67,7 +74,6 @@ LLMs = [
     
     'yi:34b',
     'aya:35b',
-    'command-r',
 
     'mixtral',
     
@@ -77,6 +83,7 @@ LLMs = [
     'qwen2:72b',
     'qwen2-math:72b',
     'qwen2.5:72b',
+    'nemotron',
 
     'command-r-plus',
 
