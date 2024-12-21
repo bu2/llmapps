@@ -48,7 +48,7 @@ LLMs = [
 DEFAULT_INSTRUCTOR = 'mistral-large'
 DEFAULT_EXECUTOR = DEFAULT_INSTRUCTOR
 
-SYSTEM_COT = 'Think about how to crack the complex problem and define a plan to solve it. Output the plan only, as a flat list of tasks.'
+SYSTEM_COT = 'Think about how to crack the complex problem and define a plan to solve it. Output only the plan in plain text, as a flat list of tasks.'
 
 SYSTEM_PLAN = 'Extract all tasks with their full description and output them as a JSON list of strings.\n'
 
