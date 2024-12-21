@@ -2,21 +2,9 @@ import ollama
 import streamlit as st
 
 LLMs = [
-    # 'qwen2.5:0.5b',
-
-    'llama3.2:1b',
-
-    'qwen2.5:1.5b',
-    'qwen2.5-coder:1.5b',
-    'qwen2-math:1.5b',
-    'yi-coder:1.5b',
-
-    'gemma2:2b',
-
-    'granite3-dense:2b',
-
     'llama3.2:3b',
     'qwen2.5:3b',
+    'falcon3:3b',
     
     # 'phi',
     # 'phi3',
@@ -25,7 +13,7 @@ LLMs = [
     # 'llama2',
     
     'mistral',
-    'mathstral',
+    # 'mathstral',
 
     # 'qwen2',
     # 'qwen2-math',
@@ -36,25 +24,33 @@ LLMs = [
     
     # 'llama3',
     'llama3.1',
-    'hermes3',
-    'aya',
-    'yi-coder',
+    # 'hermes3',
+    'tulu3',
+    'falcon3:7b',
 
-    'granite3-dense:8b',
+    # 'aya',
+    # 'yi-coder',
+
+    'granite3.1-dense',
+
+    'opencoder',
 
     # 'gemma',
     'gemma2',
 
     # 'glm4',
     # 'codegeex4',
+
+    'falcon3:10b',
     
     'mistral-nemo',
 
     'phi3:14b',
     'qwen2.5:14b',
+    'qwen2.5-coder:14b',
 
-    'deepseek-v2',
-    'deepseek-coder-v2',
+    # 'deepseek-v2',
+    # 'deepseek-coder-v2',
     
     # 'starcoder2:15b',
 
@@ -67,6 +63,8 @@ LLMs = [
     'command-r',
 
     'qwen2.5:32b',
+    'qwen2.5-coder:32b',
+    'qwq',
     
     'deepseek-coder:33b',
 
@@ -79,11 +77,13 @@ LLMs = [
     
     'llama3:70b',
     'llama3.1:70b',
+    'llama3.3:70b',
     'hermes3:70b',
+    'nemotron',
+
     'qwen2:72b',
     'qwen2-math:72b',
     'qwen2.5:72b',
-    'nemotron',
 
     'command-r-plus',
 
@@ -91,10 +91,7 @@ LLMs = [
 
     'mistral-large',
     
-    # 'dbrx',
-    
     'mixtral:8x22b',
-    'wizardlm2:8x22b',
 ]
 TEMPERATURE = 0
 JUDGE = 'chatgpt'

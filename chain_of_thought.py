@@ -10,20 +10,20 @@ import tiktoken
 
 
 LLMs = [
-    'qwen2.5:0.5b',
-    'llama3.2:1b',
-    'qwen2.5:1.5b',
-    'qwen2.5-coder:1.5b',
-    'gemma2:2b',
     'llama3.2:3b',
     'qwen2.5:3b',
+    'falcon3:3b',
     'phi3.5',
     'mistral',
     'qwen2.5',
     'qwen2.5-coder',
     'llama3.1',
     'hermes3',
-    'gemma2'
+    'tulu3',
+    'falcon3:7b',
+    'granite3.1-dense',
+    'gemma2',
+    'falcon3:10b',
     'mistral-nemo',
     'phi3:14b',
     'qwen2.5:14b',
@@ -32,9 +32,12 @@ LLMs = [
     'gemma2:27b',
     'command-r',
     'qwen2.5:32b',
+    'qwq',
     'mixtral',
     'llama3.1:70b',
+    'llama3.3:70b',
     'hermes3:70b',
+    'tulu3:70b',
     'qwen2.5:72b',
     'command-r-plus',
     'qwen:110b',
@@ -45,15 +48,13 @@ LLMs = [
 DEFAULT_INSTRUCTOR = 'mistral-large'
 DEFAULT_EXECUTOR = DEFAULT_INSTRUCTOR
 
-SYSTEM_COT = 'Break down the complex problem into smaller pieces and follow a top-down approach to construct the solution step by step. ' \
-             'Specify each step in natural language and recall all necessary requirements at each step. '                                 \
-             'Write the plan as a long and flat list of tasks without any hierarchy. Stop right after the plan.\n'
+SYSTEM_COT = 'Think about how to crack the complex problem and define a plan to solve it. Output the plan only, as a flat list of tasks.'
 
 SYSTEM_PLAN = 'Extract all tasks with their full description and output them as a JSON list of strings.\n'
 
-SYSTEM_TASK = 'Reuse the context and process the current task only to refine the solution to the user problem.\n'
+SYSTEM_TASK = 'Use the context and process the task to progress toward the solution to the user problem.\n'
 
-SYSTEM_PROMPT = 'Reuse the context to answer the prompt.\n'
+SYSTEM_PROMPT = 'Use the context to answer the prompt.\n'
 
 STATE_FILE = 'cot_session_state.json'
 
@@ -193,7 +194,7 @@ elif st.session_state.do_planning and st.session_state.go:
             st.markdown('### ' + step)
         
         prompt2 = build_prompt(st.session_state.prompt)
-        prompt2 += f"\n\n\n## Current task:\n{step}"
+        prompt2 += f"\n\n\n## Task:\n{step}"
         prompt2 += '\n\n\n' + SYSTEM_TASK 
         response = llm(prompt2, EXECUTOR)
         with st.chat_message('ai'):
@@ -236,7 +237,7 @@ else:
     st.session_state.history.append({'role': 'user', 'message': prompt})
     
     prompt2 = build_prompt()
-    prompt2 += f"\n\n\n## Task\n{prompt}"
+    prompt2 += f"\n\n\n## Prompt:\n{prompt}"
     prompt2 += '\n\n\n' + SYSTEM_PROMPT
     response = llm(prompt2, INSTRUCTOR)
     with st.chat_message('ai'):
