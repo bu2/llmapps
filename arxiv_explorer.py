@@ -60,9 +60,8 @@ LIMIT = 1000
 COLS = ['id', 'update_date', 'submitter', 'authors', 'title', 'categories', 'license', 'abstract']
 
 SYSTEM_KEYWORDS = '''
-Summarize the following prompt to a very short list of specific keywords to search in research papers:
+Summarize the following prompt to a very short list of distinct keywords to search in research papers:
 %s
-
 
 Use lowercase, avoid plural and keep any compound words as single keyword with spaces.
 Output the keywords as a valid JSON list of strings.
@@ -225,6 +224,7 @@ Prompt: {prompt}
 
 Analyse all the information from the context in your mind and use it to produce a detailed step-by-step answer to the prompt.
 Justify your answer with examples and references from the context.
+Conclude with an Executive Summary with key figures.
 Add a table of unique references (date, authors, title) from the context after your answer.
 ''')
     answer = st.write_stream(streaming_callback(response))
