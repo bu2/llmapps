@@ -5,7 +5,7 @@ LLM experiments based on Ollama and Streamlit.
 ### Prerequisites
 You need a local install of Ollama (https://ollama.com) and the following Python packages:
 ```bash
-$ pip install chromadb ollama pandas streamlit sentence-transformers tiktoken tqdm watchdog
+$ pip install chromadb ollama pandas streamlit tiktoken tqdm watchdog
 ```
 
 ### Code Assistant
@@ -24,4 +24,10 @@ $ streamlit run llm_arena.py
 Leverage the Chain-of-Thought principle to crack complex problems.
 ```bash
 $ streamlit run chain_of_thought.py
+```
+
+### ArXiv eXplorer
+Leverage LLMs with RAG to explore the [ArXiv abstracts dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv).
+```bash
+$ streamlit run arxiv_explorer.py
 ```
