@@ -166,7 +166,7 @@ def streaming_callback(x):
         yield chunk['response']
 
 
-st.set_page_config(layout="wide")    
+st.set_page_config(layout="wide")
 print_banner()
 st.title('ArXiv eXplorer')
 st.markdown('##### Leverage LLMs with RAG to explore the [ArXiv abstracts dataset](https://www.kaggle.com/datasets/Cornell-University/arxiv).')
