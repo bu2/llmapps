@@ -28,12 +28,20 @@ LLMs = [
     'tulu3',
     'falcon3:7b',
 
+    'deepseek-r1:7b',
+    'deepseek-r1:8b',
+
+    'granite3.1-dense',
+    'dolphin3',
+
     # 'aya',
     # 'yi-coder',
 
     'granite3.1-dense',
 
     'opencoder',
+
+    'command-r7b',
 
     # 'gemma',
     'gemma2',
@@ -48,6 +56,7 @@ LLMs = [
     'phi3:14b',
     'qwen2.5:14b',
     'qwen2.5-coder:14b',
+    'deepseek-r1:14b',
 
     # 'deepseek-v2',
     # 'deepseek-coder-v2',
@@ -65,6 +74,8 @@ LLMs = [
     'qwen2.5:32b',
     'qwen2.5-coder:32b',
     'qwq',
+
+    'deepseek-r1:32b',
     
     'deepseek-coder:33b',
 
@@ -80,6 +91,8 @@ LLMs = [
     'llama3.3:70b',
     'hermes3:70b',
     'nemotron',
+
+    'deepseek-r1:70b',
 
     'qwen2:72b',
     'qwen2-math:72b',

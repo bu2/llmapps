@@ -15,12 +15,19 @@ LLMs = [
     'qwen2.5-coder',
     'opencoder',
     'tulu3',
+    'falcon3:7b',
+    'deepseek-r1:7b',
+    'deepseek-r1:8b',
+    'granite3.1-dense',
+    'dolphin3',
+    'command-r7b',
     'gemma2',
     'falcon3:10b',
     'mistral-nemo',
     'phi3:14b',
     'qwen2.5:14b',
     'qwen2.5-coder:14b',
+    'deepseek-r1:14b',
     'codestral',
     'mistral-small',
     'gemma2:27b',
@@ -28,11 +35,13 @@ LLMs = [
     'qwen2.5:32b',
     'qwen2.5-coder:32b',
     'qwq',
+    'deepseek-r1:32b',
     'mixtral',
     'llama3.1:70b',
     'llama3.3:70b',
     'nemotron',
     'tulu3:70b',
+    'deepseek-r1:70b',
     'qwen2.5:72b',
     'command-r-plus',
     'qwen:110b',
@@ -40,7 +49,7 @@ LLMs = [
     'mixtral:8x22b',
 ]
 
-LLM = 'codestral'
+LLM = 'deepseek-r1:70b'
 
 SYSTEM = 'Output only code with comments.'
 

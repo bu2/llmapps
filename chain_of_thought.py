@@ -21,23 +21,30 @@ LLMs = [
     'hermes3',
     'tulu3',
     'falcon3:7b',
+    'deepseek-r1:7b',
+    'deepseek-r1:8b',
     'granite3.1-dense',
+    'dolphin3',
+    'command-r7b',
     'gemma2',
     'falcon3:10b',
     'mistral-nemo',
     'phi3:14b',
     'qwen2.5:14b',
+    'deepseek-r1:14b',
     'mistral-small',
     'codestral',
     'gemma2:27b',
     'command-r',
     'qwen2.5:32b',
     'qwq',
+    'deepseek-r1:32b',
     'mixtral',
     'llama3.1:70b',
     'llama3.3:70b',
     'hermes3:70b',
     'tulu3:70b',
+    'deepseek-r1:70b',
     'qwen2.5:72b',
     'command-r-plus',
     'qwen:110b',
@@ -45,7 +52,7 @@ LLMs = [
     'mixtral:8x22b',
 ]
 
-DEFAULT_INSTRUCTOR = 'mistral-large'
+DEFAULT_INSTRUCTOR = 'deepseek-r1:70b'
 DEFAULT_EXECUTOR = DEFAULT_INSTRUCTOR
 
 SYSTEM_COT = 'Think about how to crack the complex problem and define a plan to solve it. Output only the plan in plain text, as a flat list of tasks.'
